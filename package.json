@@ -7,19 +7,14 @@
     "electron-pdf-window": "^1.0.12",
     "electron-simple-updater": "^2.0.9"
   },
+  "build": "electron-builder build --win --publish never",
+  "deploy": "electron-builder build --win --publish always",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/markgwaps04/electron-ccts-tracer.git"
   },
   "author": "Mark Anthony Libres",
   "license": "CC0-1.0",
-  "build": {
-    "productName": "Yuan",
-    "copyright": "Copyright © Mark Anthony Libres",
-    "publish": [
-      "github"
-    ]
-  },
   "scripts": {
     "start": "electron .",
     "pack": "electron-builder --dir",
