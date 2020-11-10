@@ -8,15 +8,10 @@ const path = require("path");
 const url = require("url");
 const ipc = electron.ipcMain;
 const dialog = electron.dialog;
-const updater = electron.autoUpdater;
-
+const { autoUpdater } = require('electron-updater');
 let win;
 
-updater.on("error", function (details) {
-    console.log(details);
-});
 
-updater.setFeedURL({ url : "https://bitbucket.org/MarkAnthonyLibres/electron-digos-ccts-tracer/src/master/yuan11-win32-x64/" })
 
 function createWindow()
 {
@@ -25,6 +20,18 @@ function createWindow()
             nodeIntegration: true,
             enableRemoteModule: true
         }
+    });
+
+    win.once('ready-to-show', () => {
+        autoUpdater.checkForUpdatesAndNotify();
+    });
+
+    autoUpdater.on('update-available', () => {
+        win.webContents.send('update_available');
+    });
+
+    autoUpdater.on('update-downloaded', () => {
+        autoUpdater.quitAndInstall();
     });
 
     win.loadURL(url.format({

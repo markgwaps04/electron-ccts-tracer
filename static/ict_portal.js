@@ -30,3 +30,7 @@ const ipc = electron.ipcRenderer;
 
 })(jQuery);
 
+ipc.on('update_available', () => {
+    ipcRenderer.removeAllListeners('update_available');
+    console.log('A new update is available. Downloading now...');
+});

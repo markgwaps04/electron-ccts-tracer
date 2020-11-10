@@ -5,7 +5,8 @@
   "description": "Electron first app",
   "dependencies": {
     "electron-pdf-window": "^1.0.12",
-    "electron-simple-updater": "^2.0.9"
+    "electron-simple-updater": "^2.0.9",
+    "electron-updater": "^4.3.5"
   },
   "repository": {
     "type": "git",
