@@ -1,0 +1,34 @@
+{
+  "name": "CCTS_ID_TRACKER",
+  "version": "1.0.0",
+  "main": "main.js",
+  "description": "Electron first app",
+  "dependencies": {
+    "electron-pdf-window": "^1.0.12",
+    "electron-simple-updater": "^2.0.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markgwaps04/electron-ccts-tracer.git"
+  },
+  "author": "Mark Anthony Libres",
+  "license": "CC0-1.0",
+  "build": {
+    "productName": "Yuan",
+    "copyright": "Copyright © Mark Anthony Libres",
+    "publish": [
+      "github"
+    ]
+  },
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps",
+    "release": "build"
+  },
+  "devDependencies": {
+    "electron": "^10.1.5",
+    "electron-builder": "^22.9.1"
+  }
+}
