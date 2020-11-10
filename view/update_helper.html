@@ -140,7 +140,7 @@
                         <div class="module fullscreen-container">
 
                             <div class="module-head bg-green">
-                                <h3>ID TRACKER</h3>
+                                <h3>New version has been release</h3>
                                 <div class="right-action hide_mobile">
                                     <button type="submit" class="btn btn-large btn-zoom-in">
                                         <b>Zoom In</b>
@@ -156,81 +156,11 @@
                             <div class="module-body fullscreen-content">
 
                                 <p>
-                                    <b>Welcome to ICT Portal</b>, please fill the required information. Thank you.
+                                    <b>Your app is out of date</b>, click the button to install the new version of this app.
                                 </p>
 
-                                <form method="POST"
-                                      enctype="multipart/form-data"
-                                      id="tracker"
-                                      class="form-horizontal row-fluid" data-parsley-validate>
+                                <button id="download_app_release" type="submit" class="btn btn-large btn-success">Download and Install</button>
 
-                                    <div class="docs-example">
-
-                                        <div class="control-group">
-                                            <label class="control-label">
-                                                <b>Email</b>
-                                            </label>
-                                            <div class="controls">
-                                                <input type="email"
-                                                       name="email"
-                                                       required
-                                                       placeholder="Email"
-                                                       value=""
-                                                       class="span7 tip">
-                                            </div>
-                                        </div>
-
-                                        <div class="control-group">
-                                            <label class="control-label">
-                                                <b>No. of days</b>
-                                            </label>
-                                            <div class="controls">
-                                                <input type="number"
-                                                       name="days"
-                                                       required
-                                                       value="1"
-                                                       placeholder="No. of days to query"
-                                                       class="span7 tip">
-                                            </div>
-                                        </div>
-
-                                        <div class="control-group">
-                                            <label class="control-label">
-                                                <b>Limit</b>
-                                            </label>
-                                            <div class="controls">
-                                                <input type="number"
-                                                       name="limit"
-                                                       value="1"
-                                                       placeholder="(Optional)"
-                                                       class="span7 tip">
-                                            </div>
-                                        </div>
-
-
-                                        <div class="control-group">
-                                            <label class="control-label">
-                                                <b>Order by</b>
-                                            </label>
-                                            <div class="controls">
-                                                <select class="span7 tip" name="sort">
-                                                    <option value='1'>Ascending</option>
-                                                    <option value='-1' selected>Descending</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="control-group">
-                                            <div class="controls">
-                                                <button type="submit" class="btn btn-large btn-success">Submit Form
-                                                </button>
-                                                <button type="reset" class="btn btn-large btn-default">Reset
-                                                </button>
-                                            </div>
-                                        </div>
-
-
-                                </form>
 
                             </div>
                         </div>
@@ -258,10 +188,8 @@
 <script src="../static/parsely_validation_plugin.js"></script>
 
 <script>
-
     require("../static/index.js")
-    require("../static/ict_portal.js")
-
+    require("../static/update_helper.js")
 </script>
 
 </body>

@@ -11,11 +11,13 @@ const dialog = electron.dialog;
 const { autoUpdater } = require('electron-updater');
 let win;
 
+autoUpdater.autoDownload = false;
 
 
 function createWindow()
 {
     win = new BrowserWindow({
+        title : "ICT PORTAL v" + app.getVersion(),
         webPreferences: {
             nodeIntegration: true,
             enableRemoteModule: true
@@ -23,16 +25,16 @@ function createWindow()
     });
 
     win.once('ready-to-show', () => {
-        autoUpdater.checkForUpdatesAndNotify();
+       autoUpdater.checkForUpdates();
     });
 
     autoUpdater.on('update-available', () => {
-        win.webContents.send('update_available');
+        win.loadFile(path.join(__dirname, 'view/update_helper.html'))
     });
-
-    autoUpdater.on('update-downloaded', () => {
-        autoUpdater.quitAndInstall();
-    });
+    //
+    // autoUpdater.on('update-downloaded', () => {
+    //     autoUpdater.quitAndInstall();
+    // });
 
     win.loadURL(url.format({
         pathname: path.join(__dirname, 'view/index.html'),
@@ -106,6 +108,10 @@ ipc.on("trace_email", function (event, data) {
         win.maximize()
         event.sender.send("trace_email_done");
     });
+});
+
+ipc.on("access_download_new_release", function (event, data) {
+    win.webContents.send('update_available');
 });
 
 app.on("window-all-closed", function () {

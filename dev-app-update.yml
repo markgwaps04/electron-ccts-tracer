@@ -1,0 +1,5 @@
+owner: markgwaps04
+repo: electron-ccts-tracer
+provider: github
+token: 08832dbcb3a80b07b577ddda6fc221414ce1fc78
+updaterCacheDirName: ccts_id_tracker-updater
