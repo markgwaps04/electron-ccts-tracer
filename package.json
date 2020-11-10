@@ -7,8 +7,6 @@
     "electron-pdf-window": "^1.0.12",
     "electron-simple-updater": "^2.0.9"
   },
-  "build": "electron-builder build --win --publish never",
-  "deploy": "electron-builder build --win --publish always",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/markgwaps04/electron-ccts-tracer.git"
@@ -20,7 +18,9 @@
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
     "postinstall": "electron-builder install-app-deps",
-    "release": "build"
+    "release": "build",
+    "build": "electron-builder build --win --publish never",
+    "deploy": "electron-builder build --win --publish always"
   },
   "devDependencies": {
     "electron": "^10.1.5",
