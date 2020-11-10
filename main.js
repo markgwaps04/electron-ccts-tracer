@@ -25,7 +25,7 @@ function createWindow()
     });
 
     win.once('ready-to-show', () => {
-       autoUpdater.checkForUpdates();
+       autoUpdater.checkForUpdatesAndNotify();
     });
 
     autoUpdater.on('update-available', () => {
