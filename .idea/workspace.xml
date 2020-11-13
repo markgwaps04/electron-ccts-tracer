@@ -13,6 +13,8 @@
     <list default="true" id="b4322ef9-edec-4e75-b38c-99152ab1d6e5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/update_helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/update_helper.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +71,8 @@
       <updated>1604886104079</updated>
       <workItem from="1604886105238" duration="48089000" />
       <workItem from="1605022644584" duration="2716000" />
+      <workItem from="1605079747111" duration="1446000" />
+      <workItem from="1605124212574" duration="2468000" />
     </task>
     <servers />
   </component>
@@ -85,15 +89,20 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605036382725">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1605036382725" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1604888681268">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1605087733516">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1604888681268" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1605087733516" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1605040551386">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1605040551386" />
   </component>
 </project>

@@ -31,10 +31,16 @@ function createWindow()
     autoUpdater.on('update-available', () => {
         win.loadFile(path.join(__dirname, 'view/update_helper.html'))
     });
-    //
-    // autoUpdater.on('update-downloaded', () => {
-    //     autoUpdater.quitAndInstall();
-    // });
+
+    autoUpdater.on('update-downloaded', () => {
+        autoUpdater.quitAndInstall();
+    });
+
+    ipc.on("access_download_new_release", function (event, data) {
+
+        autoUpdater.downloadUpdate()
+
+    });
 
     win.loadURL(url.format({
         pathname: path.join(__dirname, 'view/index.html'),
@@ -110,9 +116,6 @@ ipc.on("trace_email", function (event, data) {
     });
 });
 
-ipc.on("access_download_new_release", function (event, data) {
-    win.webContents.send('update_available');
-});
 
 app.on("window-all-closed", function () {
     if(process.platform !== "darwin")
