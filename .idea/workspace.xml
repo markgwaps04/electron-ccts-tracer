@@ -13,8 +13,11 @@
     <list default="true" id="b4322ef9-edec-4e75-b38c-99152ab1d6e5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/update_helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/update_helper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/update_helper.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/update_helper.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,17 +51,18 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/view" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\WebDev\WebstormProjects\CCTS_ID_TRACKER" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\WebDev\WebstormProjects\CCTS_ID_TRACKER\publish" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\WebDev\WebstormProjects\CCTS_ID_TRACKER\view" />
+      <recent name="C:\Users\WebDev\WebstormProjects\CCTS_ID_TRACKER" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -72,7 +76,10 @@
       <workItem from="1604886105238" duration="48089000" />
       <workItem from="1605022644584" duration="2716000" />
       <workItem from="1605079747111" duration="1446000" />
-      <workItem from="1605124212574" duration="2468000" />
+      <workItem from="1605124212574" duration="4444000" />
+      <workItem from="1605336362069" duration="2497000" />
+      <workItem from="1605404495945" duration="3900000" />
+      <workItem from="1605533205432" duration="6825000" />
     </task>
     <servers />
   </component>
@@ -96,13 +103,17 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1605036382725" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1605087733516">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1605338093826">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1605087733516" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1605338093826" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1605040551386">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1605040551386" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1605582624751">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1605582624751" />
   </component>
 </project>

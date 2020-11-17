@@ -24,6 +24,9 @@ function createWindow()
         }
     });
 
+    win.maximize();
+    win.webContents.openDevTools();
+
     win.once('ready-to-show', () => {
        autoUpdater.checkForUpdates();
     });
@@ -36,9 +39,25 @@ function createWindow()
         autoUpdater.quitAndInstall();
     });
 
+    autoUpdater.on('download-progress', (progressObj) => {
+        // let log_message = "Download speed: " + progressObj.bytesPerSecond;
+        // log_message = log_message + ' - Downloaded ' + progressObj.percent + '%';
+        // log_message = log_message + ' (' + progressObj.transferred + "/" + progressObj.total + ')';
+        win.webContents.send("download-progress",{
+            "progress_percent" : Math.round(progressObj.percent),
+            "download_per_second" : progressObj.bytesPerSecond,
+            "total" : progressObj.total
+        });
+    });
+
+
     ipc.on("access_download_new_release", function (event, data) {
 
-        autoUpdater.downloadUpdate()
+        const a = autoUpdater.downloadUpdate()
+        a.then(function (b) {
+            //Path
+            console.log(b);
+        });
 
     });
 
@@ -78,13 +97,32 @@ ipc.on("trace_email", function (event, data) {
     var d = new Date();
     d.setDate(d.getDate() - (data.days));
 
-    let query = {
-        query : {
-            "Email" : data.email,
-            "start" : {"$gte" : d.toISOString()}
-        },
-        sort : { "_id" : data.sort }
-    };
+    let query = {}
+
+    if (data.hasOwnProperty("email"))
+    {
+        const of_query = {
+            query : {
+                "Email" : data.email,
+                "start" : {"$gte" : d.toISOString()}
+            },
+            sort : { "_id" : data.sort }
+        }
+
+        query = Object.assign(query, of_query);
+    }
+    else
+    {
+        const of_query = {
+            query : {
+                "First_Name" : {'$regex': data.first_name},
+                "Name" : {'$regex': data.last_name}
+            }
+        }
+
+        query = Object.assign(query, of_query);
+
+    }
 
 
     data.limit = data.limit || 0;
