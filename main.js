@@ -25,7 +25,6 @@ function createWindow()
     });
 
     win.maximize();
-    win.webContents.openDevTools();
 
     win.once('ready-to-show', () => {
        autoUpdater.checkForUpdates();
